@@ -10,8 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.github\workflows\Automatic_BuildOnCommit_PreviewRelease.yml = .github\workflows\Automatic_BuildOnCommit_PreviewRelease.yml
 		.github\workflows\Automatic_BuildOnPR.yml = .github\workflows\Automatic_BuildOnPR.yml
 		Directory.Build.props = Directory.Build.props
-		Directory.Build.targets = Directory.Build.targets
 		Directory.Build.props.user = Directory.Build.props.user
+		Directory.Build.targets = Directory.Build.targets
 		.github\workflows\Manual_BuildAllMods_MainRelease.yml = .github\workflows\Manual_BuildAllMods_MainRelease.yml
 		ModThatBroke.txt = ModThatBroke.txt
 		ModVersionData.json = ModVersionData.json
@@ -26,6 +26,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UL_UniversalLyzer", "UL_UniversalLyzer\UL_UniversalLyzer.csproj", "{A6EC01CD-EC34-4618-A6CC-FB33AC200700}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_WorldGenStateCapture", "_WorldGenStateCapture\_WorldGenStateCapture.csproj", "{B74CE776-4827-47A2-8857-844A88C1C06F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntibacterialSilver", "AntibacterialSilver\AntibacterialSilver.csproj", "{4ED481A5-C7BC-42A5-A93E-F47F6017355B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{B74CE776-4827-47A2-8857-844A88C1C06F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B74CE776-4827-47A2-8857-844A88C1C06F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B74CE776-4827-47A2-8857-844A88C1C06F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ED481A5-C7BC-42A5-A93E-F47F6017355B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ED481A5-C7BC-42A5-A93E-F47F6017355B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ED481A5-C7BC-42A5-A93E-F47F6017355B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ED481A5-C7BC-42A5-A93E-F47F6017355B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

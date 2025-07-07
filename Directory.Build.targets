@@ -28,10 +28,10 @@
 	<Target Name="GenerateLauncherMetadata" BeforeTargets="Build" Condition="'$(DoNotBuildAsMod)' != 'true'">
 		<ItemGroup>
 			<LauncherMetadataLines Include='{'/>
-			<LauncherMetadataLines Include='"UpdateIndexName":"Mods by Sgt_Imalas",'/>
-			<LauncherMetadataLines Include='"UpdateIndexURL":"https://github.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/releases/download/AllMods_Automated_Build_FullRelease/_ReleaseVersionInfoData.json",'/>
-			<LauncherMetadataLines Include='"BugReportURL":"https://github.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/issues/new/choose",'/>
-			<LauncherMetadataLines Include='"RepoURL":"https://github.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods",'/>
+			<LauncherMetadataLines Include='"UpdateIndexName":"Mods by aboucher51",'/>
+			<LauncherMetadataLines Include='"UpdateIndexURL":"https://github.com/aboucher51/silver-oni-mods/releases/download/AllMods_Automated_Build_FullRelease/_ReleaseVersionInfoData.json",'/>
+			<LauncherMetadataLines Include='"BugReportURL":"https://github.com/aboucher51/silver-oni-mods/issues/new/choose",'/>
+			<LauncherMetadataLines Include='"RepoURL":"https://github.com/aboucher51/silver-oni-mods",'/>
 			<LauncherMetadataLines Include='"Author":"$(Authors)"'/>			
 			<LauncherMetadataLines Include='}'/>
 		</ItemGroup>
