@@ -14,7 +14,7 @@ namespace AntibacterialSilver
             public class SILVERORE
             {
                 public static LocString NAME = UI.FormatAsLink("Silver Ore", nameof(SILVERORE));
-                public static LocString DESC = Name+" is a soft metal. It is suitable for building Power systems and has minor antimicrobial properties.";
+                public static LocString DESC = NAME + " is a soft metal. It is suitable for building Power systems and has minor antimicrobial properties.";
                 public static LocString EFFECT = "So Tasty";
             }
             public class SILVER

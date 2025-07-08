@@ -2,6 +2,7 @@
 using KMod;
 using System;
 using UtilLibs;
+using System.Collections.Generic;
 
 namespace AntibacterialSilver
 {
@@ -11,6 +12,7 @@ namespace AntibacterialSilver
         {
             base.OnLoad(harmony);
             SgtLogger.LogVersion(this, harmony);
+            //ModAssets.LoadAll();
         }
 
         public override void OnAllModsLoaded(Harmony harmony, IReadOnlyList<KMod.Mod> mods)

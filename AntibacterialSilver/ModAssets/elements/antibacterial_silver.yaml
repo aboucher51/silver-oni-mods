@@ -17,13 +17,14 @@ elements:
     lightAbsorptionFactor: 1
     radiationAbsorptionFactor: 0.128
     radiationPer1000Mass: 0
-    materialCategory: Other
+    materialCategory: Metal
     tags:
-    - silvermod_antibacterial
+    - Antiseptic
+    - Ore
     buildMenuSort: 3
     isDisabled: false
     state: Solid
-    localizationID: STRINGS.ELEMENTS.CHEESE.NAME
+    localizationID: STRINGS.ELEMENTS.SILVERORE.NAME
     dlcId: ""
 
   - elementId: Silver
@@ -43,13 +44,13 @@ elements:
     lightAbsorptionFactor: 1
     radiationAbsorptionFactor: 0.128
     radiationPer1000Mass: 0
-    materialCategory: Other
+    materialCategory: RefinedMetal
     tags:
-    - silvermod_antibacterial
+    - Antiseptic
     buildMenuSort: 3
     isDisabled: false
     state: Solid
-    localizationID: STRINGS.ELEMENTS.SALTYMILKFAT.NAME
+    localizationID: STRINGS.ELEMENTS.SILVER.NAME
     dlcId: ""
 
   - elementId: MoltenSilver
@@ -75,10 +76,10 @@ elements:
     radiationAbsorptionFactor: 0.128
     radiationPer1000Mass: 0
     tags:
-    - silvermod_antibacterial
+    - Antiseptic
     isDisabled: false
     state: Liquid
-    localizationID: STRINGS.ELEMENTS.CHEESEMOLTEN.NAME
+    localizationID: STRINGS.ELEMENTS.MOLTENSILVER.NAME
     dlcId: ""
 
   - elementId: SilverGas
@@ -103,10 +104,10 @@ elements:
     radiationAbsorptionFactor: 0.128
     radiationPer1000Mass: 0
     tags:
-    - silvermod_antibacterial
+    - Antiseptic
     isDisabled: false
     state: Gas
-    localizationID: STRINGS.ELEMENTS.CHEESEMOLTEN.NAME
+    localizationID: STRINGS.ELEMENTS.SILVERGAS.NAME
     dlcId: ""
 
   

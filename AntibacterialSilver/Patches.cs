@@ -1,6 +1,8 @@
-﻿using Database;
+﻿using AntibacterialSilver.ModElements;
+using Database;
 using HarmonyLib;
 using Klei.AI;
+using Klei.AI.DiseaseGrowthRules;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +26,6 @@ namespace AntibacterialSilver
 
             public static void Prefix()
             {
-                ElementLoader.FindElementByHash(SimHashes.Slimelung);
                 
             }
         }
@@ -40,46 +41,25 @@ namespace AntibacterialSilver
             }
         }
 
-        [HarmonyPatch(typeof(ElementLoader), "LoadElements")]
-        public static class SilverGermGrowthPatch
+        // Make food poisoning rapidly die on silver
+        [HarmonyPatch(typeof(FoodGerms), "PopulateElemGrowthInfo")]
+        public static class FoodGerms_PopulateElemGrowthInfo
         {
-            public static void Postfix()
+            public static void Postfix(FoodGerms __instance)
             {
-                ElementGrowthRule silverGermRule = GermUtils.DieInElement(SimHashes.silver);
+                var rules = __instance.growthRules;
+                rules.Add(GermUtils.DieInElement(ModElementRegistration.Silver.SimHash));
+            }
+        }
 
-                // Find the Slimelung element
-                Element slimelungElement = ElementLoader.FindElementByHash(SimHashes.SlimeLung);
-
-                if (slimelungElement != null)
-                {
-                    // Add the growth rule to Slimelung
-                    slimelungElement.growthRules = slimelungElement.growthRules == null
-                        ? new System.Collections.Generic.List<Element.GrowthRule>()
-                        : new System.Collections.Generic.List<Element.GrowthRule>(slimelungElement.growthRules);
-
-                    slimelungElement.growthRules.Add(silverGermRule);
-                }
-                else
-                {
-                    Debug.LogWarning("Slimelung element not found!");
-                }
-
-                // Find the foodPoisoning Element
-                Element foodPoisoningElement = ElementLoader.FindElementByHash(SimHashes.FoodPoisoning);
-
-                if (foodPoisoningElement != null)
-                {
-                    // Add the growth rule to Slimelung
-                    foodPoisoningElement.growthRules = foodPoisoningElement.growthRules == null
-                        ? new System.Collections.Generic.List<Element.GrowthRule>()
-                        : new System.Collections.Generic.List<Element.GrowthRule>(foodPoisoningElement.growthRules);
-
-                    foodPoisoningElement.growthRules.Add(silverGermRule);
-                }
-                else
-                {
-                    Debug.LogWarning("Foodpoisoning element not found!");
-                }
+        // Make food poisoning rapidly die on silver
+        [HarmonyPatch(typeof(SlimeGerms), "PopulateElemGrowthInfo")]
+        public static class SlimeGerms_PopulateElemGrowthInfo
+        {
+            public static void Postfix(FoodGerms __instance)
+            {
+                var rules = __instance.growthRules;
+                rules.Add(GermUtils.DieInElement(ModElementRegistration.Silver.SimHash));
             }
         }
     }

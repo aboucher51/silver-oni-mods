@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UtilLibs;
 
-namespace Cheese.ModElements
+namespace AntibacterialSilver.ModElements
 {
 	public class ModElementRegistration
 	{
